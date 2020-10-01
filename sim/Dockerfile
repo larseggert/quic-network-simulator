@@ -1,7 +1,7 @@
 FROM ubuntu:20.04 AS builder
 
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y python3 build-essential cmake wget
+  DEBIAN_FRONTEND=noninteractive apt-get install -y python3 build-essential cmake wget libssl-dev
 
 ENV VERS 3.31
 RUN wget https://www.nsnam.org/release/ns-allinone-$VERS.tar.bz2
