@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
   client_em->SetByteErrorRate(stoi(client_ber));
   server_em->SetByteErrorRate(stoi(server_ber));
   client_em->SetKeylogs(client_keylog, server_keylog);
-  server_em->SetKeylogs(client_keylog, server_keylog);
+  server_em->SetKeylogs(server_keylog, client_keylog);
 
   QuicNetworkSimulatorHelper sim;
 
